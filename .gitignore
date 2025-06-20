@@ -151,6 +151,9 @@ venv.bak/
 .dmypy.json
 dmypy.json
 
+# firebase
+plangenie-54362-firebase-adminsdk-fbsvc-bbcab25a72.json
+
 # Pyre type checker
 .pyre/
 
