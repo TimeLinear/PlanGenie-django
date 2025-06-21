@@ -27,3 +27,12 @@ class ScheduleSerializer(serializers.ModelSerializer):
         time = validated_data.pop("time")
         event_time = datetime.combine(date, time)
         return Schedule.objects.create(event_time=event_time, **validated_data)
+
+
+class WeatherRequestSerializer(serializers.Serializer):
+    """Serializer for on-demand weather queries."""
+
+    date = serializers.DateField()
+    time = serializers.TimeField()
+    lat = serializers.FloatField()
+    lng = serializers.FloatField()
